@@ -1,0 +1,51 @@
+div.map{
+	width: 600px;
+	height: 600px;
+	background-color: #ccc;
+	position: relative;
+}
+div.rectangle{
+	color: #fff;
+	font-size: 4em;
+	font-family: arial;
+}
+div.first{
+	background-color: #cd0000;
+	width: 60%;
+	height: 50%;
+	left:0;
+	top: 50%;
+	position: absolute;	
+}
+div.second{
+	background-color: #990000;
+	width: 60%;
+	height: 50%;
+	left:0;
+	bottom: 50%;
+	position: absolute;	
+}
+div.third{
+	background-color: #660000;
+	width: 40%;
+	height: 40%;
+	left:60%;
+	bottom: 0;
+	position: absolute;	
+}
+div.fourth{
+	background-color: #330000;
+	width: 20%;
+	height: 60%;
+	left:60%;
+	bottom: 40%;
+	position: absolute;	
+}
+div.fifth{
+	background-color: #160000;
+	width: 20%;
+	height: 60%;
+	left:80%;
+	bottom: 40%;
+	position: absolute;	
+}
