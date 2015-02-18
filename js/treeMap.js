@@ -48,6 +48,46 @@ function Rectangle(name, area, backColor){
 	}
 }
 
+//#region Algorithm
+//
+// Собственно, алгоритм
+// 
+var currentWidth = 100, currentHeight = 100;
+
+//TODO реализовать раскладку прямоугольников
+function layoutrow(row){
+
+
+}
+
+function squarify(children, row, w){
+    var c = children[0];
+    if(worst(row, w ) <  worst(row.concat(c, w))){
+        squarify(children.shift(), row.concat(c), w);
+    }
+    else{
+        layoutrow(row);
+        squarify(children, [], width());
+    }
+}
+
+function worst(row, w){
+    var s = 0;
+    for(var i in row){
+        s+=row[i];
+    }
+    var rPlus = Math.max(row);
+    var rMin = Math.min(row);
+    return Math.max(w * w * rPlus / s / s, s * s / rMinus / w / w);
+}
+
+function width(){
+    return Math.min(currentWidth, currentHeight);
+
+}
+//#endregion
+
+
 function TreeMap(){
 	var _rectanglesList = [],
 		_colorMap = ["#cd0000", "#990000", "#660000", "#330000", "#160000"],
@@ -71,11 +111,6 @@ function TreeMap(){
 		var s = _rectanglesList[startIndex];
 		var w = s / h;
 		var a = getAspectRatio(w, h); 		
-		var aspectModified = getAspectRatio(h, )
-		if()
-		
-		
-		
 	}
 	
 	return {
